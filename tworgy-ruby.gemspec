@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{tworgy-ruby-ext}
+  s.name = %q{tworgy-ruby}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.rdoc",
      "Rakefile",
-     "lib/tworgy-ruby-ext.rb",
+     "lib/tworgy-ruby.rb",
      "lib/tworgy/recursively.rb",
      "lib/tworgy/standard_extensions.rb",
      "lib/tworgy/tmail.rb",
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
      "spec/spec_helper.rb",
      "spec/tworgy-ruby-ext_spec.rb"
   ]
-  s.homepage = %q{http://github.com/matholroyd/tworgy-ruby-ext}
+  s.homepage = %q{http://github.com/matholroyd/tworgy-ruby}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}

@@ -1,1 +1,1 @@
-require 'tworgy-ruby-ext'
+require 'tworgy-ruby'

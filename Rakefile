@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "tworgy-ruby-ext"
+    gem.name = "tworgy-ruby"
     gem.summary = %Q{Handy Ruby extensions}
     gem.description = %Q{fdsfsad}
     gem.email = "code@tworgy.com"
-    gem.homepage = "http://github.com/matholroyd/tworgy-ruby-ext"
+    gem.homepage = "http://github.com/matholroyd/tworgy-ruby"
     gem.authors = ["Mat Holroyd"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.files = %w(LICENSE README.rdoc Rakefile) + Dir.glob("{lib,spec}/**/*")
@@ -39,7 +39,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "tworgy-ruby-ext #{version}"
+  rdoc.title = "tworgy-ruby #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

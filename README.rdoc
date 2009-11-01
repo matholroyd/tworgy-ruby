@@ -1,4 +1,4 @@
-= tworgy-ruby-ext
+= tworgy-ruby
 
 Description goes here.
 

@@ -5,13 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "tworgy-ruby-ext"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "matholroyd@gmail.com"
+    gem.summary = %Q{Handy Ruby extensions}
+    gem.description = %Q{fdsfsad}
+    gem.email = "code@tworgy.com"
     gem.homepage = "http://github.com/matholroyd/tworgy-ruby-ext"
     gem.authors = ["Mat Holroyd"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.files = %w(LICENSE README.rdoc Rakefile) + Dir.glob("{lib,spec}/**/*")
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tworgy-ruby}
-  s.version = "0.1.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mat Holroyd"]
-  s.date = %q{2009-11-01}
+  s.date = %q{2009-11-06}
   s.description = %q{fdsfsad}
   s.email = %q{code@tworgy.com}
   s.extra_rdoc_files = [
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "lib/tworgy-ruby.rb",
+     "lib/tworgy/dbc.rb",
      "lib/tworgy/recursively.rb",
      "lib/tworgy/standard_extensions.rb",
      "lib/tworgy/tmail.rb",

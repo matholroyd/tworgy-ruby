@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tworgy-ruby}
-  s.version = "0.3.0"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mat Holroyd"]
-  s.date = %q{2009-11-06}
+  s.date = %q{2009-11-23}
   s.description = %q{fdsfsad}
   s.email = %q{code@tworgy.com}
   s.extra_rdoc_files = [
@@ -25,9 +25,9 @@ Gem::Specification.new do |s|
      "lib/tworgy/recursively.rb",
      "lib/tworgy/standard_extensions.rb",
      "lib/tworgy/tmail.rb",
+     "spec/lib/tworgy/recursively_spec.rb",
      "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "spec/tworgy-ruby-ext_spec.rb"
+     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/matholroyd/tworgy-ruby}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -35,8 +35,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Handy Ruby extensions}
   s.test_files = [
-    "spec/spec_helper.rb",
-     "spec/tworgy-ruby-ext_spec.rb"
+    "spec/lib/tworgy/recursively_spec.rb",
+     "spec/spec_helper.rb"
   ]
 
   if s.respond_to? :specification_version then

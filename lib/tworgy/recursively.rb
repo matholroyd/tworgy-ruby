@@ -29,4 +29,12 @@ class Hash
   def recursively!(&block)
     replace(recursively(&block))
   end
+
+  def ostructify
+    result = inject({}) do |hash, (key, value)|
+      hash[key] = value.is_a?(Hash) ? value.ostructify : value
+      hash
+    end
+    OpenStruct.new result
+  end
 end

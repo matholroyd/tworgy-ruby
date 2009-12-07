@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "tworgy-ruby"
     gem.summary = %Q{Handy Ruby extensions}
-    gem.description = %Q{fdsfsad}
+    gem.description = %Q{Handy Ruby extensions}
     gem.email = "code@tworgy.com"
     gem.homepage = "http://github.com/matholroyd/tworgy-ruby"
     gem.authors = ["Mat Holroyd"]

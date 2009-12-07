@@ -10,12 +10,30 @@ describe "recursively" do
     
     describe 'ostructify' do
       before :each do
-        @object = {:person => {:name => 'bob', :age => 5}}.ostructify
+        @object = {:person => {:name => 'bob', :age => 5}, :array => [{:something => 'in the array'}]}.ostructify
       end
       
       it 'should turn a nested hash into nested OpenStructs' do
         @object.person.name.should == 'bob'
         @object.person.age.should == 5
+      end
+      
+      it 'should keep ostructify all the way past arrays' do
+        @object.array[0].something.should == 'in the array'
+      end
+    end
+  end
+  
+  describe Array do
+    describe 'ostructify' do
+      before :each do
+        @object = [{:person => {:name => 'bob', :age => 5}}, {:animal => 'dog'}].ostructify
+      end
+      
+      it 'should recursively ostructify things in the array' do
+        @object[0].person.name.should == 'bob'
+        @object[0].person.age.should == 5
+        @object[1].animal.should == 'dog'
       end
     end
   end

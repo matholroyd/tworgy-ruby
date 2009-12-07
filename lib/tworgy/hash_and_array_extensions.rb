@@ -12,6 +12,10 @@ class Array
   def recursively!(&block)
     replace(recursively(&block))
   end
+  
+  def ostructify 
+    collect { |i| (i.is_a?(Hash) || i.is_a?(Array)) ? i.ostructify : i }
+  end
 end
 
 class Hash
@@ -32,9 +36,10 @@ class Hash
 
   def ostructify
     result = inject({}) do |hash, (key, value)|
-      hash[key] = value.is_a?(Hash) ? value.ostructify : value
+      hash[key] = (value.is_a?(Hash) || value.is_a?(Array)) ? value.ostructify : value
       hash
     end
     OpenStruct.new result
   end
 end
+

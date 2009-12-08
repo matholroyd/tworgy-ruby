@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mat Holroyd"]
-  s.date = %q{2009-12-07}
+  s.date = %q{2009-12-08}
   s.description = %q{Handy Ruby extensions}
   s.email = %q{code@tworgy.com}
   s.extra_rdoc_files = [
@@ -20,12 +20,15 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.rdoc",
      "Rakefile",
+     "lib/tworgy-ruby-testing.rb",
      "lib/tworgy-ruby.rb",
      "lib/tworgy/dbc.rb",
      "lib/tworgy/hash_and_array_extensions.rb",
      "lib/tworgy/standard_extensions.rb",
+     "lib/tworgy/testing.rb",
      "lib/tworgy/tmail.rb",
      "spec/lib/tworgy/hash_and_array_extensions_spec.rb",
+     "spec/lib/tworgy/testing_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
@@ -36,6 +39,7 @@ Gem::Specification.new do |s|
   s.summary = %q{Handy Ruby extensions}
   s.test_files = [
     "spec/lib/tworgy/hash_and_array_extensions_spec.rb",
+     "spec/lib/tworgy/testing_spec.rb",
      "spec/spec_helper.rb"
   ]
 

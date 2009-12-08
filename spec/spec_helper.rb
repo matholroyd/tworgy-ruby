@@ -3,6 +3,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'rubygems'
 require 'tworgy-ruby'
+require 'tworgy-ruby-testing'
 require 'spec'
 require 'spec/autorun'
 

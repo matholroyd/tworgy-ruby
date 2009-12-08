@@ -1,3 +1,5 @@
+require 'ostruct'
+
 class Array
   def recursively(&block)
     map do |item|
@@ -29,17 +31,24 @@ class Hash
       yield hash
     end
   end
-  
+   
   def recursively!(&block)
     replace(recursively(&block))
   end
 
   def ostructify
-    result = inject({}) do |hash, (key, value)|
+    temp = inject({}) do |hash, (key, value)|
       hash[key] = (value.is_a?(Hash) || value.is_a?(Array)) ? value.ostructify : value
       hash
     end
-    OpenStruct.new result
+    result = OpenStruct.new temp
+    
+    if result.instance_variable_get('@table')[:id] != nil
+      def result.id
+        instance_variable_get('@table')[:id]
+      end
+    end
+    result
   end
 end
 

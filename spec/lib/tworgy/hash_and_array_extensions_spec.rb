@@ -14,15 +14,23 @@ describe "recursively" do
       end
       
       it 'should turn a nested hash into nested OpenStructs' do
-        @object.person.name.should == 'bob'
+        @object.person.name.should == 'bob' 
         @object.person.age.should == 5
       end
       
       it 'should keep ostructify all the way past arrays' do
         @object.array[0].something.should == 'in the array'
-      end
-    end
-  end
+      end 
+      
+      it 'should replace the "def id" if id was defined, so dont get those annoying ruby warnings' do
+        capture_stderr {
+          o = {:id => 1}.ostructify
+          o.id.should == 1
+        }.should == "" 
+      end 
+      
+    end 
+  end 
   
   describe Array do
     describe 'ostructify' do

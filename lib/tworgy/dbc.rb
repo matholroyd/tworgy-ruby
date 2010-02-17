@@ -1,35 +1,42 @@
 class DBC 
+  class PreconditionException < RuntimeError; end
+  class AssertconditionException < RuntimeError; end
+  class PostconditionException < RuntimeError; end
+  class FailException < RuntimeError; end
+
   def self.require(condition, message = "")
     unless condition
-      error('Pre', message, caller)
+      error(PreconditionException, message, caller)
     end
   end
 
   def self.require_not_blank(string, message = "")
-    if string.strip.blank?
-      error('Pre', message, caller)
+    if string.nil? || string.strip.blank?
+      error(PreconditionException, message, caller)
     end
   end
 
   def self.assert(condition, message = "")
     unless condition
-      error('Assert', message, caller)
+      error(AssertconditionException, message, caller)
     end
   end
 
   def self.ensure(condition, message = "")
     unless condition
-      error('Post', message, caller)
+      error(PostconditionException, message, caller)
     end
   end
   
   def self.fail(message = "")
-    error('Fail', message, caller)
+    error(FailException, message, caller)
   end
   
   private 
   
-  def self.error(type, message, caller)
-    raise RuntimeError.new("#{type}-condition failed: #{message}\nTrace was: #{caller.join("\n")}")
+  def self.error(klass, message, caller)
+    raise klass.new("#{klass.name}-condition failed: #{message}\nTrace was: #{caller.join("\n")}")
   end
+  
 end
+
